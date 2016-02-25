@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.changhong.view.MusicPlayView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.changhong.view"
+    android:id="@+id/root_play_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <com.changhong.view.CircleImageView
+        android:id="@+id/avatar"
+        android:layout_width="170dip"
+        android:layout_height="170dip"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="170dp"
+        android:src="@drawable/default_item_cover" />
+
+    <ImageView
+        android:id="@+id/discbg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="110dp"
+        android:src="@drawable/fm_disc_bg" />
+
+    <ImageView
+        android:id="@+id/disc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="123dp"
+        android:src="@drawable/fm_play_disc" />
+
+    <ImageView
+        android:id="@+id/needle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dip"
+        android:layout_marginTop="100dip"
+        android:src="@drawable/fm_play_needle" />
+
+</com.changhong.view.MusicPlayView>

@@ -1,0 +1,142 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main7" >
+
+    <include
+        android:id="@+id/layout_media_play_view"
+        layout="@layout/media_play_view" />
+
+    <TextView
+        android:id="@+id/menutext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:text=""
+        android:textColor="@color/White"
+        android:textSize="20sp" />
+
+    <!--  
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@+id/menutext"
+        android:src="@drawable/menu_icon" />
+        -->
+
+    <RelativeLayout
+        android:id="@+id/main_lrc_layout"
+        android:layout_width="820dp"
+        android:layout_height="450dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="100dp" >
+
+        <com.changhong.view.LycView
+            android:id="@+id/main_lrc_view"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/main_nolrc_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/nolyc_content"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/main_time_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/main_lrc_layout"
+        android:layout_marginLeft="200dp"
+        android:text="@string/music_time_init"
+        android:textSize="22sp" />
+
+    <RelativeLayout
+        android:id="@+id/main_control_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/main_time_textview" >
+
+        <com.changhong.view.AlwaysMarqueeTextview
+            android:id="@+id/main_title_name"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="40dp"
+            android:ellipsize="marquee"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="@string/music_title_init"
+            android:textColor="@color/White"
+            android:textSize="30sp" />
+
+        <com.changhong.view.AlwaysMarqueeTextview
+            android:id="@+id/main_title_singer"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_title_name"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="10dp"
+            android:ellipsize="marquee"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="@string/music_title_init"
+            android:textColor="@color/White"
+            android:textSize="22sp" />
+
+        <ImageButton
+            android:id="@+id/main_imgbtn_playorpause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/transparent"
+            android:src="@drawable/player_btn_play_style" />
+
+        <ImageButton
+            android:id="@+id/main_imgbtn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50dp"
+            android:layout_toRightOf="@+id/main_imgbtn_playorpause"
+            android:background="@color/transparent"
+            android:src="@drawable/player_btn_next_style" />
+
+        <ImageButton
+            android:id="@+id/main_imgbtn_pre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50dp"
+            android:layout_toLeftOf="@+id/main_imgbtn_playorpause"
+            android:background="@color/transparent"
+            android:src="@drawable/player_btn_previous_style" />
+
+        <ImageButton
+            android:id="@+id/main_imgbtn_changemode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="60dp"
+            android:background="@color/transparent"
+            android:src="@drawable/player_btn_mode_repeat_all_style" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_item"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="horizontal"
+    android:padding="5dp" >
+
+    <com.changhong.view.RoundedImageView
+        android:id="@+id/image_item_singer"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/music_default"
+        app:riv_border_color="#333333"
+        app:riv_border_width="2dip"
+        app:riv_corner_radius="100dip"
+        app:riv_mutate_background="true"
+        app:riv_oval="false"
+        app:riv_tile_mode="clamp" />
+
+    <RelativeLayout
+        android:layout_width="370dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="70dp" >
+
+        <TextView
+            android:id="@+id/text_songname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:textColor="@color/White"
+            android:textSize="24sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/image_playing"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="80dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/playing_5"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/text_item_singer"
+        android:layout_width="230dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="40dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@color/White"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/text_item_time"
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="03:45"
+        android:visibility="invisible"
+        android:textColor="@color/White"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/image_item_mode"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        android:src="@drawable/playlist_item_delete"
+        android:visibility="invisible" />
+
+</LinearLayout>
